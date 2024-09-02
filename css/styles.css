@@ -1,0 +1,166 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0px;
+}
+body{
+    background-color: rgb(201, 201, 201);
+}
+section{
+    background-color: whitesmoke;
+    padding: 20px;
+    margin: 20px 0px;
+    border-radius: 5px;
+}
+header, main{
+    padding: 0 5vw;
+}
+
+hr{
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+/* Header */
+header{
+    background-color: rgb(68, 68, 68);
+}
+header h1{
+    color: ghostwhite;
+    text-align: center;
+    font-weight: normal;
+    padding: 15px 0px;
+}
+/* Propiedades de texto */
+.pProperties{
+    font-size: 18px;
+    text-align: justify;
+    text-decoration: line-through;
+    text-decoration-color: rgba(0, 72, 167, 0.425);
+    margin-bottom: 10px;
+}
+blockquote{
+    background-color: rgb(230, 227, 227);
+    padding: 20px;
+}
+blockquote p{
+    color: rgb(92, 92, 92);
+    font-style: italic;
+}
+.quoteBy{
+    text-align: end;
+}
+/* Propiedades de caja */
+.divUno{
+    background-color: gainsboro;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+.divDos{
+    background-color: rgb(247, 201, 117);
+    border: 5px solid black;
+    border-radius: 20px 5px;
+    padding: 20px;
+}
+/* Posición relativa y absoluta */
+.divRelative{
+    position: relative;
+    background-color: rgb(224, 247, 250);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.divAbsolute{
+    position: absolute;
+    right: 7vw;
+    top: 670px;
+    background-color: rgb(52, 153, 153);
+    border-radius: 5px;
+    padding: 20px;
+    width: 35%;
+}
+.divAbsolute p{
+    color: white;
+}
+/* Principios de grid */
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    gap: 10px;
+}
+.grid-item{
+    background-color: rgb(103, 103, 226);
+    padding: 20px;
+    border-radius: 10px;
+}
+.grid-item p{
+    color: whitesmoke;
+    text-align: center;
+}
+/* Principios de animaciones */
+.animacion{
+    position: relative;
+    margin: 20px 0;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    transition: 1s;
+}
+.animacion:hover{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(132, 155, 3);
+}
+.mover{
+    position: relative;
+    margin: 20px 0;
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    animation-name: circulito;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes circulito {
+    0%      {left: 0px ;}
+    40%     {left: 100px;}
+    50%     {left: 70px;}
+    60%     {left: 100px;}
+    100%    {left: 0px;}
+}
+/* Media queries */
+@media (max-width: 768px){
+    body{
+        background-color: rgb(182, 137, 224);
+    }
+    header h1{
+        font-size: 28px;
+    }
+    .divAbsolute{
+        top: 720px;
+    }
+    .divRelative p{
+        width: 35vw;
+    }
+}
+@media (max-width: 425px){
+    .divAbsolute{
+        top: 830px;
+    }
+}
+@media (max-width: 375px){
+    .divAbsolute{
+        top: 870px;
+    }
+}
+@media (max-width: 320px){
+    .divAbsolute{
+        top: 980px;
+    }
+}
